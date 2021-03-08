@@ -9,13 +9,17 @@ export default function () {
         return {
           [`${nameClass('space-y', modifier)} > :not([hidden]) ~ :not([hidden])`]: {
             '--tw-space-y-reverse': '0',
-            'margin-top': `calc(${size} * calc(1 - var(--tw-space-y-reverse)))`,
+            'margin-top': `calc(${size} * calc(0.5 - var(--tw-space-y-reverse)))`,
             'margin-bottom': `calc(${size} * var(--tw-space-y-reverse))`,
+            'padding-top': `calc(${size} * calc(0.5 - var(--tw-space-y-reverse)))`,
+            'padding-bottom': `calc(${size} * var(--tw-space-y-reverse))`,
           },
           [`${nameClass('space-x', modifier)} > :not([hidden]) ~ :not([hidden])`]: {
             '--tw-space-x-reverse': '0',
             'margin-right': `calc(${size} * var(--tw-space-x-reverse))`,
             'margin-left': `calc(${size} * calc(1 - var(--tw-space-x-reverse)))`,
+            'padding-right': `calc(${size} * var(--tw-space-x-reverse))`,
+            'padding-left': `calc(${size} * calc(1 - var(--tw-space-x-reverse)))`,
           },
         }
       },
